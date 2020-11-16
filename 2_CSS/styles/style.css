@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+
+h1 {
+    color: orange;
+    background-color: yellow;
+    font-size: 40px;
+    font-family: 'Xanh Mono', cursive;
+    text-align: center;
+}
+
+.mano-paragrafas {
+    color: #303096;
+    font-weight: bold;
+    border: 3px solid red;
+    padding: 20px;
+}
+
+p {
+    background-color: thistle;
+}
+
+a {
+background-color: wheat;
+}
+
+.galerija {
+background-color: sandybrown;
+padding: 50px;
+width: 100%;
+}
+
+div.galerija img {
+border: 5px solid gray;
+padding: 15px;
+margin-left: 15px;
+background-color: honeydew;
+box-shadow: khaki 5px 5px 10px;
+}

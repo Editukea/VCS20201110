@@ -19,11 +19,11 @@ console.log(masyvas);
 var profile = {
     firstName: "Edita",
     lastName: "Neverauskaite",
-    fullName: function() {
+    fullName: function () {
         return this.firstName + " " + this.lastName;
     },
-    changeName: function(mewFirstName){
-this.firstName = mewFirstName;
+    changeName: function (mewFirstName) {
+        this.firstName = mewFirstName;
     }
 }
 profile.changeName("Rasa");
@@ -38,21 +38,39 @@ document.body.append(paragraph);
 
 var button1 = document.querySelector("#change-p-color");
 
-button1.addEventListener("click", function() {
+button1.addEventListener("click", function () {
 
     var outro = document.querySelector("div.outro p");
 
     outro.style.color = "red";
 
-if (outro.style.color == "red") {
-    outro.style.color = "black";
-}
-else {
-    outro.style.color = "red";
-}
+    if (outro.style.color == "red") {
+        outro.style.color = "black";
+    }
+    else {
+        outro.style.color = "red";
+    }
 });
 
-document.addEventListener("keyup", function (event){
+document.addEventListener("keyup", function (event) {
     console.log(event.key);
-    
+
 });
+
+
+var button2 = document.querySelector("#change-img");
+var i = 0;
+button2.addEventListener("click", function () {
+    var image = document.querySelector("div.gallery img");
+    image.setAttribute("src", "http://picsum.photos/seed/" + Math.random() + "/150");
+
+});
+
+var images = document.querySelectorAll("div.gallery img");
+
+for (var j = 0; j < images.length; j++) {
+    images[j].addEventListener("click", function (event) {
+        event.target.setAttribute("src", "http://picsum.photos/seed/" + Math.random() + "/150");
+    });
+}
+
